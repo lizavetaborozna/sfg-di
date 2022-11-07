@@ -1,15 +1,18 @@
 package spring.svg.di.sfgdi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import spring.svg.di.sfgdi.services.GreetingServiceImpl;
+import spring.svg.di.sfgdi.services.GreetingService;
 
 @Controller
 public class SetterInjectedController {
-    private GreetingServiceImpl greetingService;
 
+    private GreetingService greetingService;
+
+    @Qualifier("setterInjectedGreetingService")
     @Autowired
-    public void setGreetingService(GreetingServiceImpl greetingService) {
+    public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

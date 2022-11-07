@@ -7,7 +7,6 @@ import spring.svg.di.sfgdi.controllers.ConstructorInjectedController;
 import spring.svg.di.sfgdi.controllers.MyController;
 import spring.svg.di.sfgdi.controllers.PropertyInjectedController;
 import spring.svg.di.sfgdi.controllers.SetterInjectedController;
-import spring.svg.di.sfgdi.services.GreetingServiceImpl;
 
 @SpringBootApplication
 public class SfgDiApplication {
