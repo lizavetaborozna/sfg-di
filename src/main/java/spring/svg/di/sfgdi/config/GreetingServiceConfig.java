@@ -7,7 +7,7 @@ import spring.svg.di.sfgdi.services.*;
 import svg.pets.PetService;
 import svg.pets.PetServiceFactory;
 
-@ImportResource("classpath:sfgdi-config.xml")
+//@ImportResource("classpath:sfgdi-config.xml")
 @Configuration
 public class GreetingServiceConfig {
 
@@ -51,7 +51,7 @@ public class GreetingServiceConfig {
         return new PrimaryGreetService();
     }
 
-    //    @Bean
+    @Bean
     ConstructorGreetingService constructorGreetingService() {
         return new ConstructorGreetingService();
     }
