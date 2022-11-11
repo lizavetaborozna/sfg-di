@@ -3,11 +3,10 @@ package spring.svg.di.sfgdi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import spring.svg.di.sfgdi.controllers.*;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"spring.svg.di.sfgdi", "svg.pets"})
+//@ComponentScan(basePackages = {"spring.svg.di.sfgdi", "svg.pets"})
 public class SfgDiApplication {
 
     public static void main(String[] args) {

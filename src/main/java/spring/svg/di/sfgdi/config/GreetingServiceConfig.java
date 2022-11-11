@@ -7,9 +7,28 @@ import org.springframework.context.annotation.Profile;
 import spring.svg.di.sfgdi.repositories.EnglishGreetingRepository;
 import spring.svg.di.sfgdi.repositories.EnglishGreetingRepositoryImpl;
 import spring.svg.di.sfgdi.services.*;
+import svg.pets.PetService;
+import svg.pets.PetServiceFactory;
 
 @Configuration
 public class GreetingServiceConfig {
+
+    @Bean
+    PetServiceFactory petServiceFactory() {
+        return new PetServiceFactory();
+    }
+
+    @Profile({"dog", "default"})
+    @Bean
+    PetService dogPetService(PetServiceFactory petServiceFactory) {
+        return petServiceFactory.getPetService("dog");
+    }
+
+    @Profile("cat")
+    @Bean
+    PetService catPetService(PetServiceFactory petServiceFactory) {
+        return petServiceFactory.getPetService("cat");
+    }
 
     @Bean("i18Service")
     @Profile({"ES", "default"})
