@@ -9,7 +9,6 @@ import spring.svg.di.sfgdi.services.*;
 import svg.pets.PetService;
 import svg.pets.PetServiceFactory;
 
-@PropertySource("classpath:datasource.properties")
 //@ImportResource("classpath:sfgdi-config.xml")
 @Configuration
 public class GreetingServiceConfig {
